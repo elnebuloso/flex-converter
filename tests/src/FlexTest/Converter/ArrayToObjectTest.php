@@ -33,7 +33,8 @@ class ArrayToObjectTest extends \PHPUnit_Framework_TestCase {
             3
         );
 
-        $result = ArrayToObject::convert($data);
+        $converter = new ArrayToObject();
+        $result = $converter->convert($data);
         $this->assertEquals($expected, $result);
     }
 
@@ -51,7 +52,8 @@ class ArrayToObjectTest extends \PHPUnit_Framework_TestCase {
         $expected->foo = new \stdClass();
         $expected->foo->bar = 'baz';
 
-        $result = ArrayToObject::convert($data);
+        $converter = new ArrayToObject();
+        $result = $converter->convert($data);
         $this->assertEquals($expected, $result);
     }
 }

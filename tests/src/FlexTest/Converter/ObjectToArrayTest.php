@@ -33,7 +33,8 @@ class ObjectToArrayTest extends \PHPUnit_Framework_TestCase {
             )
         );
 
-        $result = ObjectToArray::convert($data);
+        $converter = new ObjectToArray();
+        $result = $converter->convert($data);
         $this->assertEquals($expected, $result);
     }
 
@@ -51,7 +52,8 @@ class ObjectToArrayTest extends \PHPUnit_Framework_TestCase {
             )
         );
 
-        $result = ObjectToArray::convert($data);
+        $converter = new ObjectToArray();
+        $result = $converter->convert($data);
         $this->assertEquals($expected, $result);
     }
 }

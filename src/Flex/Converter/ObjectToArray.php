@@ -13,7 +13,7 @@ class ObjectToArray {
      * @param mixed $data
      * @return array
      */
-    public static function convert($data) {
+    public function convert($data) {
         if(is_object($data)) {
             $data = get_object_vars($data);
         }

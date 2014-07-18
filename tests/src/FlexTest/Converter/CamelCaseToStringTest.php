@@ -15,8 +15,9 @@ class CamelCaseToStringTest extends \PHPUnit_Framework_TestCase {
      * @return void
      */
     public function test_convert() {
-        $this->assertEquals('Foo_Bar_Baz', CamelCaseToString::convert('FooBarBaz'));
-        $this->assertEquals('Foo-Bar-Baz', CamelCaseToString::convert('FooBarBaz', '-'));
-        $this->assertEquals('Foo Bar Baz', CamelCaseToString::convert('FooBarBaz', ' '));
+        $converter = new CamelCaseToString();
+        $this->assertEquals('Foo_Bar_Baz', $converter->convert('FooBarBaz'));
+        $this->assertEquals('Foo-Bar-Baz', $converter->convert('FooBarBaz', '-'));
+        $this->assertEquals('Foo Bar Baz', $converter->convert('FooBarBaz', ' '));
     }
 }

@@ -14,7 +14,7 @@ class CamelCaseToString {
      * @param string $delimiter
      * @return mixed
      */
-    public static function convert($string, $delimiter = '_') {
+    public function convert($string, $delimiter = '_') {
         return preg_replace('/(?<=\\w)(?=[A-Z])/', "$delimiter$1", $string);
     }
 }

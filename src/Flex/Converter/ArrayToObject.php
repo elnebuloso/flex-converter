@@ -15,7 +15,7 @@ class ArrayToObject {
      * @param array $data
      * @return stdClass
      */
-    public static function convert($data) {
+    public function convert($data) {
         if(is_array($data)) {
             if(!is_numeric(key($data))) {
                 return (object) array_map(__METHOD__, $data);

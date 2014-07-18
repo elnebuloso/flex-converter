@@ -13,11 +13,12 @@ class PathToClassname {
      * @param string $string
      * @return string
      */
-    public static function convert($string) {
+    public function convert($string) {
+        $stringToCamelCase = new StringToCamelCase();
         $parts = array();
 
         foreach(explode('/', trim($string, '/')) as $part) {
-            $parts[] = ucfirst(StringToCamelCase::convert($part, '-'));
+            $parts[] = ucfirst($stringToCamelCase->convert($part, '-'));
         }
 
         return implode('\\', $parts);

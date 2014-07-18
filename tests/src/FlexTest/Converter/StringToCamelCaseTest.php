@@ -15,8 +15,9 @@ class StringToCamelCaseTest extends \PHPUnit_Framework_TestCase {
      * @return void
      */
     public function test_convert() {
-        $this->assertEquals('fooBarBaz', StringToCamelCase::convert('foo_bar_baz'));
-        $this->assertEquals('fooBarBaz', StringToCamelCase::convert('foo-bar-baz', '-'));
-        $this->assertEquals('fooBarBaz', StringToCamelCase::convert('foo bar baz', ' '));
+        $converter = new StringToCamelCase();
+        $this->assertEquals('fooBarBaz', $converter->convert('foo_bar_baz'));
+        $this->assertEquals('fooBarBaz', $converter->convert('foo-bar-baz', '-'));
+        $this->assertEquals('fooBarBaz', $converter->convert('foo bar baz', ' '));
     }
 }
