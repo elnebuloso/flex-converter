@@ -10,6 +10,8 @@ namespace Flex\Converter;
 class ObjectToArray {
 
     /**
+     * convert object to array
+     *
      * @param mixed $data
      * @return array
      */

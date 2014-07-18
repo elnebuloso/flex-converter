@@ -10,6 +10,8 @@ namespace Flex\Converter;
 class CamelCaseToString {
 
     /**
+     * convert camel case string
+     *
      * @param string $string
      * @param string $delimiter
      * @return mixed

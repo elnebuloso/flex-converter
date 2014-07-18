@@ -10,6 +10,8 @@ namespace Flex\Converter;
 class PathToClassname {
 
     /**
+     * convert path to classname
+     *
      * @param string $string
      * @return string
      */

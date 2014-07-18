@@ -12,6 +12,8 @@ use stdClass;
 class ArrayToObject {
 
     /**
+     * convert array to object
+     *
      * @param array $data
      * @return stdClass
      */
