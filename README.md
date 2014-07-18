@@ -1,4 +1,4 @@
 flex-converter
 ==============
 
-different converters, easy to use
+different converter, easy to use
