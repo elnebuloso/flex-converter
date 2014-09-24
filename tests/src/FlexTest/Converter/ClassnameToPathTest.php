@@ -12,9 +12,9 @@ use Flex\Converter\ClassnameToPath;
 class ClassnameToPathTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @return void
+     * @test
      */
-    public function test_convert() {
+    public function convert() {
         $converter = new ClassnameToPath();
         $this->assertEquals('user/registration', $converter->convert('User\Registration'));
         $this->assertEquals('user/profile/add-nickname', $converter->convert('User\Profile\AddNickname'));

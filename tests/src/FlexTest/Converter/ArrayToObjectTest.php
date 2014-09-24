@@ -12,9 +12,9 @@ use Flex\Converter\ArrayToObject;
 class ArrayToObjectTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @return void
+     * @test
      */
-    public function test_create() {
+    public function create() {
         $data = array(
             'foo' => array(
                 'bar' => array(
@@ -39,9 +39,9 @@ class ArrayToObjectTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @return void
+     * @test
      */
-    public function test_create_object() {
+    public function createObject() {
         $data = array(
             'foo' => array(
                 'bar' => 'baz'

@@ -12,9 +12,9 @@ use Flex\Converter\ArrayToXml;
 class ArrayToXmlTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @return void
+     * @test
      */
-    public function test_create_simple() {
+    public function createSimple() {
         $expected = '<?xml version="1.0" encoding="UTF-8"?><books><foo>1</foo><bar>2</bar><baz>3</baz></books>';
         $books = array(
             'foo' => 1,
@@ -28,9 +28,9 @@ class ArrayToXmlTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @return void
+     * @test
      */
-    public function test_create_forCollection() {
+    public function createForCollection() {
         $expected = '<?xml version="1.0" encoding="UTF-8"?><books><element>foo</element><element>bar</element><element>baz</element></books>';
         $books = array(
             'element' => array(
@@ -46,9 +46,9 @@ class ArrayToXmlTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @return void
+     * @test
      */
-    public function test_create_full() {
+    public function createFull() {
         $expected = '<?xml version="1.0" encoding="UTF-8"?><books type="fiction"><book author="George Orwell"><title>1984</title></book><book author="Isaac Asimov"><title><![CDATA[Foundation]]></title><price>$15.61</price></book><book author="Robert A Heinlein"><title><![CDATA[Stranger in a Strange Land]]></title><price discount="10%">$18.00</price></book></books>';
         $books = array(
             '@attributes' => array(

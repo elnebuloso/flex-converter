@@ -12,9 +12,9 @@ use Flex\Converter\StringToCamelCase;
 class StringToCamelCaseTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @return void
+     * @test
      */
-    public function test_convert() {
+    public function convert() {
         $converter = new StringToCamelCase();
         $this->assertEquals('fooBarBaz', $converter->convert('foo_bar_baz'));
         $this->assertEquals('fooBarBaz', $converter->convert('foo-bar-baz', '-'));

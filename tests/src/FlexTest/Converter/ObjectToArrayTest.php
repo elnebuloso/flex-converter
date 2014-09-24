@@ -12,9 +12,9 @@ use Flex\Converter\ObjectToArray;
 class ObjectToArrayTest extends \PHPUnit_Framework_TestCase {
 
     /**
-     * @return void
+     * @test
      */
-    public function test_create() {
+    public function create() {
         $data = new \stdClass();
         $data->foo = new \stdClass();
         $data->foo->bar = array(
@@ -39,9 +39,9 @@ class ObjectToArrayTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
-     * @return void
+     * @test
      */
-    public function test_create_array() {
+    public function createArray() {
         $data = new \stdClass();
         $data->foo = new \stdClass();
         $data->foo->bar = 'baz';
