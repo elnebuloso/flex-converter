@@ -4,7 +4,6 @@ namespace Flex\Converter;
 /**
  * Class ObjectToArray
  *
- * @package Flex\Converter
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class ObjectToArray {

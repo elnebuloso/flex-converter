@@ -6,7 +6,6 @@ use Flex\Converter\ObjectToArray;
 /**
  * Class ObjectToArrayTest
  *
- * @package FlexTest\Convert
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class ObjectToArrayTest extends \PHPUnit_Framework_TestCase {

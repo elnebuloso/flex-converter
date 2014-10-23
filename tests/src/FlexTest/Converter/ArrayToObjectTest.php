@@ -6,7 +6,6 @@ use Flex\Converter\ArrayToObject;
 /**
  * Class ArrayToObjectTest
  *
- * @package FlexTest\Convert
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class ArrayToObjectTest extends \PHPUnit_Framework_TestCase {

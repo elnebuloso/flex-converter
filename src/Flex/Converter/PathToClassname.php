@@ -4,7 +4,6 @@ namespace Flex\Converter;
 /**
  * Class PathToClassname
  *
- * @package Flex\Converter
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class PathToClassname {

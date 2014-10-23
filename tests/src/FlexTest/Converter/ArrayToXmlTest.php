@@ -6,7 +6,6 @@ use Flex\Converter\ArrayToXml;
 /**
  * Class ArrayToXmlTest
  *
- * @package FlexTest\Convert
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class ArrayToXmlTest extends \PHPUnit_Framework_TestCase {

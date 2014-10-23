@@ -6,7 +6,6 @@ use Flex\Converter\ClassnameToPath;
 /**
  * Class ClassnameToPathTest
  *
- * @package FlexTest\Convert
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class ClassnameToPathTest extends \PHPUnit_Framework_TestCase {

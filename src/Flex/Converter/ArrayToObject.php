@@ -6,7 +6,6 @@ use stdClass;
 /**
  * Class ArrayToObject
  *
- * @package Flex\Converter
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class ArrayToObject {

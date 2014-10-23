@@ -7,7 +7,6 @@ use Exception;
 /**
  * Class ArrayToXml
  *
- * @package Flex\Convert
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  * @info inspired by
  * @link http://www.lalit.org/lab/convert-php-array-to-xml-with-attributes/

@@ -6,7 +6,6 @@ use Flex\Converter\CamelCaseToString;
 /**
  * Class CamelCaseToStringTest
  *
- * @package FlexTest\Convert
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
 class CamelCaseToStringTest extends \PHPUnit_Framework_TestCase {
