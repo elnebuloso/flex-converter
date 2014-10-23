@@ -8,7 +8,7 @@
 
 ## Installation / Usage
 
-1. Composer
+Via Composer
 
 ``` json
 {
