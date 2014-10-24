@@ -13,7 +13,7 @@ class PathToClassnameTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function convert() {
+    public function test_convert() {
         $converter = new PathToClassname();
         $this->assertEquals('User\Registration', $converter->convert('user/registration'));
         $this->assertEquals('User\Profile\AddNickname', $converter->convert('user/profile/add-nickname'));

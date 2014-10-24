@@ -13,7 +13,7 @@ class ArrayToObjectTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function create() {
+    public function test_create() {
         $data = array(
             'foo' => array(
                 'bar' => array(
@@ -40,7 +40,7 @@ class ArrayToObjectTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function createObject() {
+    public function test_createObject() {
         $data = array(
             'foo' => array(
                 'bar' => 'baz'

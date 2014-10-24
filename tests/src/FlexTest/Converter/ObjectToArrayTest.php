@@ -13,7 +13,7 @@ class ObjectToArrayTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function create() {
+    public function test_create() {
         $data = new \stdClass();
         $data->foo = new \stdClass();
         $data->foo->bar = array(
@@ -40,7 +40,7 @@ class ObjectToArrayTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function createArray() {
+    public function test_createArray() {
         $data = new \stdClass();
         $data->foo = new \stdClass();
         $data->foo->bar = 'baz';

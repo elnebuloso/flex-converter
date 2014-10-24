@@ -13,7 +13,7 @@ class StringToCamelCaseTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function convert() {
+    public function test_convert() {
         $converter = new StringToCamelCase();
         $this->assertEquals('fooBarBaz', $converter->convert('foo_bar_baz'));
         $this->assertEquals('fooBarBaz', $converter->convert('foo-bar-baz', '-'));
