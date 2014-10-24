@@ -2,8 +2,6 @@
 
 [![Build Status](https://img.shields.io/travis/elnebuloso/flex-converter/master.svg?style=flat-square)](https://travis-ci.org/elnebuloso/flex-converter)
 [![Software License](https://img.shields.io/packagist/l/elnebuloso/flex-converter.svg?style=flat-square)](LICENSE)
-[![Latest Version](https://img.shields.io/packagist/v/elnebuloso/flex-converter.svg?style=flat-square)](https://packagist.org/packages/elnebuloso/flex-converter)
-[![Total Downloads](https://img.shields.io/packagist/dt/elnebuloso/flex-converter.svg?style=flat-square)](https://packagist.org/packages/elnebuloso/flex-converter)
 
 ## Installation / Usage
 
