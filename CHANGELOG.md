@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 2.1.0
+## 2.0.3
 
-- Changed signature of converter ClassnameToPath -> NamespaceClassnameToPath
-- Changed signature of converter PathToClassname -> PathToNamespaceClassname
+- marked ClassnameToPath as deprecated -> use NamespaceClassnameToPath instead
+- marked PathToClassname as deprecated -> use PathToNamespaceClassname instead
