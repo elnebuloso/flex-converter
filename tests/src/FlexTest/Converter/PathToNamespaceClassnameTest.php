@@ -1,20 +1,20 @@
 <?php
 namespace FlexTest\Convert;
 
-use Flex\Converter\PathToClassname;
+use Flex\Converter\PathToNamespaceClassname;
 
 /**
- * Class PathToClassnameTest
+ * Class PathToNamespaceClassnameTest
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class PathToClassnameTest extends \PHPUnit_Framework_TestCase {
+class PathToNamespaceClassnameTest extends \PHPUnit_Framework_TestCase {
 
     /**
      * @test
      */
     public function test_convert() {
-        $converter = new PathToClassname();
+        $converter = new PathToNamespaceClassname();
         $this->assertEquals('User\Registration', $converter->convert('user/registration'));
         $this->assertEquals('User\Profile\AddNickname', $converter->convert('user/profile/add-nickname'));
         $this->assertEquals('User\Registration', $converter->convert('//user/registration//'));

@@ -2,14 +2,14 @@
 namespace Flex\Converter;
 
 /**
- * Class ClassnameToPath
+ * Class NamespaceClassnameToPath
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class ClassnameToPath {
+class NamespaceClassnameToPath {
 
     /**
-     * convert classname to path
+     * convert namespaced classname to path
      *
      * @param string $string
      * @return string
