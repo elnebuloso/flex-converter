@@ -3,6 +3,7 @@
 ## 2.0.4
 
 - different stuff
+- phpunit updated
 
 ## 2.0.3
 
