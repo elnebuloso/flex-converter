@@ -92,6 +92,46 @@ class ArrayToXmlTest extends \PHPUnit_Framework_TestCase {
     }
 
     /**
+     * @test
+     */
+    public function test_setVersion() {
+        $converter = new ArrayToXml();
+        $expected = uniqid();
+        $converter->setVersion($expected);
+        $this->assertEquals($expected, $converter->getVersion());
+    }
+
+    /**
+     * @test
+     */
+    public function test_setEncoding() {
+        $converter = new ArrayToXml();
+        $expected = uniqid();
+        $converter->setEncoding($expected);
+        $this->assertEquals($expected, $converter->getEncoding());
+    }
+
+    /**
+     * @test
+     */
+    public function test_setFormatOutput() {
+        $converter = new ArrayToXml();
+        $expected = uniqid();
+        $converter->setFormatOutput($expected);
+        $this->assertEquals($expected, $converter->getFormatOutput());
+    }
+
+    /**
+     * @test
+     */
+    public function test_setXml() {
+        $converter = new ArrayToXml();
+        $expected = uniqid();
+        $converter->setXml($expected);
+        $this->assertEquals($expected, $converter->getXml());
+    }
+
+    /**
      * @param $string
      * @return string
      */
