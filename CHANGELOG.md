@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.1.1
+
+- just some coding conventions
+
 ## 2.1.0
 
 - removed deprecated ClassnameToPath (knowing that this will break the semantic versioning)
