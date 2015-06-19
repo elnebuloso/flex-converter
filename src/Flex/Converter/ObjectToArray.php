@@ -6,7 +6,8 @@ namespace Flex\Converter;
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class ObjectToArray {
+class ObjectToArray
+{
 
     /**
      * convert object to array
@@ -14,15 +15,15 @@ class ObjectToArray {
      * @param mixed $data
      * @return array
      */
-    public function convert($data) {
-        if(is_object($data)) {
+    public function convert($data)
+    {
+        if (is_object($data)) {
             $data = get_object_vars($data);
         }
 
-        if(is_array($data)) {
+        if (is_array($data)) {
             return array_map(__METHOD__, $data);
-        }
-        else {
+        } else {
             return $data;
         }
     }

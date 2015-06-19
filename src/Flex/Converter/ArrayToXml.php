@@ -11,7 +11,8 @@ use Exception;
  * @info inspired by
  * @link http://www.lalit.org/lab/convert-php-array-to-xml-with-attributes/
  */
-class ArrayToXml {
+class ArrayToXml
+{
 
     /**
      * @var string
@@ -38,7 +39,8 @@ class ArrayToXml {
      * @param string $encoding
      * @param bool $formatOutput
      */
-    public function __construct($version = '1.0', $encoding = 'UTF-8', $formatOutput = true) {
+    public function __construct($version = '1.0', $encoding = 'UTF-8', $formatOutput = true)
+    {
         $this->version = $version;
         $this->encoding = $encoding;
         $this->formatOutput = $formatOutput;
@@ -47,56 +49,64 @@ class ArrayToXml {
     /**
      * @param string $version
      */
-    public function setVersion($version) {
+    public function setVersion($version)
+    {
         $this->version = $version;
     }
 
     /**
      * @return string
      */
-    public function getVersion() {
+    public function getVersion()
+    {
         return $this->version;
     }
 
     /**
      * @param string $encoding
      */
-    public function setEncoding($encoding) {
+    public function setEncoding($encoding)
+    {
         $this->encoding = $encoding;
     }
 
     /**
      * @return string
      */
-    public function getEncoding() {
+    public function getEncoding()
+    {
         return $this->encoding;
     }
 
     /**
      * @param boolean $formatOutput
      */
-    public function setFormatOutput($formatOutput) {
+    public function setFormatOutput($formatOutput)
+    {
         $this->formatOutput = $formatOutput;
     }
 
     /**
      * @return boolean
      */
-    public function getFormatOutput() {
+    public function getFormatOutput()
+    {
         return $this->formatOutput;
     }
 
     /**
      * @param \DomDocument $xml
      */
-    public function setXml($xml) {
+    public function setXml($xml)
+    {
         $this->xml = $xml;
     }
 
     /**
      * @return \DomDocument
      */
-    public function getXml() {
+    public function getXml()
+    {
         return $this->xml;
     }
 
@@ -105,7 +115,8 @@ class ArrayToXml {
      * @param array $array
      * @return string
      */
-    public function convert($nodeName, array $array = array()) {
+    public function convert($nodeName, array $array = array())
+    {
         $this->xml = new DomDocument($this->version, $this->encoding);
         $this->xml->formatOutput = $this->formatOutput;
         $this->xml->appendChild($this->createXML($nodeName, $array));
@@ -119,12 +130,13 @@ class ArrayToXml {
      * @throws Exception
      * @return \DOMNode
      */
-    private function createXML($nodeName, $array) {
+    private function createXML($nodeName, $array)
+    {
         $node = $this->xml->createElement($nodeName);
 
-        if(is_array($array)) {
-            if(isset($array['@attributes'])) {
-                foreach($array['@attributes'] as $key => $value) {
+        if (is_array($array)) {
+            if (isset($array['@attributes'])) {
+                foreach ($array['@attributes'] as $key => $value) {
                     $this->testTagName($key, $nodeName);
                     $node->setAttribute($key, $this->createNodeContent($value));
                 }
@@ -133,15 +145,13 @@ class ArrayToXml {
             }
 
             // value, values cannot have child nodes, so set data and return node
-            if(isset($array['@value'])) {
+            if (isset($array['@value'])) {
                 $node->appendChild($this->xml->createTextNode($this->createNodeContent($array['@value'])));
                 unset($array['@value']);
 
                 return $node;
-            }
-
-            // cdata, cdata cannot have child nodes, so set data and return node
-            else if(isset($array['@cdata'])) {
+            } // cdata, cdata cannot have child nodes, so set data and return node
+            elseif (isset($array['@cdata'])) {
                 $node->appendChild($this->xml->createCDATASection($this->createNodeContent($array['@cdata'])));
                 unset($array['@cdata']);
 
@@ -150,16 +160,15 @@ class ArrayToXml {
         }
 
         // possible subnodes
-        if(is_array($array)) {
-            foreach($array as $key => $value) {
+        if (is_array($array)) {
+            foreach ($array as $key => $value) {
                 $this->testTagName($key, $nodeName);
 
-                if(is_array($value) && is_numeric(key($value))) {
-                    foreach($value as $v) {
+                if (is_array($value) && is_numeric(key($value))) {
+                    foreach ($value as $v) {
                         $node->appendChild($this->createXML($key, $v));
                     }
-                }
-                else {
+                } else {
                     $node->appendChild($this->createXML($key, $value));
                 }
 
@@ -167,7 +176,7 @@ class ArrayToXml {
             }
         }
 
-        if(!is_array($array)) {
+        if (!is_array($array)) {
             $node->appendChild($this->xml->createTextNode($this->createNodeContent($array)));
         }
 
@@ -178,8 +187,9 @@ class ArrayToXml {
      * @param string $var
      * @return string
      */
-    private function createNodeContent($var) {
-        if(is_bool($var)) {
+    private function createNodeContent($var)
+    {
+        if (is_bool($var)) {
             return ($var) ? 'true' : 'false';
         }
 
@@ -193,7 +203,8 @@ class ArrayToXml {
      * @param string $tag
      * @return bool
      */
-    private function isValidTagName($tag) {
+    private function isValidTagName($tag)
+    {
         $pattern = '/^[a-z_]+[a-z0-9\:\-\.\_]*[^:]*$/i';
 
         return preg_match($pattern, $tag, $matches) && $matches[0] == $tag;
@@ -204,8 +215,9 @@ class ArrayToXml {
      * @param string $nodeName
      * @throws \Exception
      */
-    private function testTagName($tag, $nodeName) {
-        if(!$this->isValidTagName($tag)) {
+    private function testTagName($tag, $nodeName)
+    {
+        if (!$this->isValidTagName($tag)) {
             throw new Exception('illegal characters: ' . $tag . ' in node: ' . $nodeName);
         }
     }

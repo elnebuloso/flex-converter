@@ -6,7 +6,8 @@ namespace Flex\Converter;
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class PathToNamespaceClassname {
+class PathToNamespaceClassname
+{
 
     /**
      * convert path to namespaced classname
@@ -14,11 +15,12 @@ class PathToNamespaceClassname {
      * @param string $string
      * @return string
      */
-    public function convert($string) {
+    public function convert($string)
+    {
         $stringToCamelCase = new StringToCamelCase();
         $parts = array();
 
-        foreach(explode('/', trim($string, '/')) as $part) {
+        foreach (explode('/', trim($string, '/')) as $part) {
             $parts[] = ucfirst($stringToCamelCase->convert($part, '-'));
         }
 

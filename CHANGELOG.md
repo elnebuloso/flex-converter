@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2.1.2
+
+- PSR1, PSR2 Coding Standard
+
 ## 2.1.1
 
 - just some coding conventions

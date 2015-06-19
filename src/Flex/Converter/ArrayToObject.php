@@ -8,7 +8,8 @@ use stdClass;
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class ArrayToObject {
+class ArrayToObject
+{
 
     /**
      * convert array to object
@@ -16,15 +17,15 @@ class ArrayToObject {
      * @param array $data
      * @return stdClass
      */
-    public function convert($data) {
-        if(is_array($data)) {
-            if(!is_numeric(key($data))) {
+    public function convert($data)
+    {
+        if (is_array($data)) {
+            if (!is_numeric(key($data))) {
                 return (object) array_map(__METHOD__, $data);
             }
 
             return $data;
-        }
-        else {
+        } else {
             return $data;
         }
     }
