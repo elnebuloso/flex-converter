@@ -8,12 +8,14 @@ use Flex\Converter\ObjectToArray;
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class ObjectToArrayTest extends \PHPUnit_Framework_TestCase {
+class ObjectToArrayTest extends \PHPUnit_Framework_TestCase
+{
 
     /**
      * @test
      */
-    public function test_create() {
+    public function testCreate()
+    {
         $data = new \stdClass();
         $data->foo = new \stdClass();
         $data->foo->bar = array(
@@ -40,7 +42,8 @@ class ObjectToArrayTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function test_createArray() {
+    public function testCreateArray()
+    {
         $data = new \stdClass();
         $data->foo = new \stdClass();
         $data->foo->bar = 'baz';

@@ -8,12 +8,14 @@ use Flex\Converter\NamespaceClassnameToPath;
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class NamespaceClassnameToPathTest extends \PHPUnit_Framework_TestCase {
+class NamespaceClassnameToPathTest extends \PHPUnit_Framework_TestCase
+{
 
     /**
      * @test
      */
-    public function test_convert() {
+    public function testConvert()
+    {
         $converter = new NamespaceClassnameToPath();
         $this->assertEquals('user/registration', $converter->convert('User\Registration'));
         $this->assertEquals('user/profile/add-nickname', $converter->convert('User\Profile\AddNickname'));

@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2.2.0
+
+- added Base64UrlDecode
+- added Base64UrlEncode
+
 ## 2.1.2
 
 - PSR1, PSR2 Coding Standard

@@ -8,12 +8,14 @@ use Flex\Converter\ArrayToObject;
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class ArrayToObjectTest extends \PHPUnit_Framework_TestCase {
+class ArrayToObjectTest extends \PHPUnit_Framework_TestCase
+{
 
     /**
      * @test
      */
-    public function test_create() {
+    public function testCreate()
+    {
         $data = array(
             'foo' => array(
                 'bar' => array(
@@ -40,7 +42,8 @@ class ArrayToObjectTest extends \PHPUnit_Framework_TestCase {
     /**
      * @test
      */
-    public function test_createObject() {
+    public function testCreateObject()
+    {
         $data = array(
             'foo' => array(
                 'bar' => 'baz'

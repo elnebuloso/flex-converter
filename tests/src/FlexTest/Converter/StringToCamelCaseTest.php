@@ -8,12 +8,14 @@ use Flex\Converter\StringToCamelCase;
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class StringToCamelCaseTest extends \PHPUnit_Framework_TestCase {
+class StringToCamelCaseTest extends \PHPUnit_Framework_TestCase
+{
 
     /**
      * @test
      */
-    public function test_convert() {
+    public function testConvert()
+    {
         $converter = new StringToCamelCase();
         $this->assertEquals('fooBarBaz', $converter->convert('foo_bar_baz'));
         $this->assertEquals('fooBarBaz', $converter->convert('foo-bar-baz', '-'));
