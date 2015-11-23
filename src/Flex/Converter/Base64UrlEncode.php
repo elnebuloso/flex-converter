@@ -8,7 +8,6 @@ namespace Flex\Converter;
  */
 class Base64UrlEncode
 {
-
     /**
      * @param string $string
      * @return string

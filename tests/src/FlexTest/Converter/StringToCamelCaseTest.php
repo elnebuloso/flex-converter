@@ -10,7 +10,6 @@ use Flex\Converter\StringToCamelCase;
  */
 class StringToCamelCaseTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @test
      */

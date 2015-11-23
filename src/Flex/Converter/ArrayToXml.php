@@ -13,7 +13,6 @@ use Exception;
  */
 class ArrayToXml
 {
-
     /**
      * @var string
      */
@@ -115,7 +114,7 @@ class ArrayToXml
      * @param array $array
      * @return string
      */
-    public function convert($nodeName, array $array = array())
+    public function convert($nodeName, array $array = [])
     {
         $this->xml = new DomDocument($this->version, $this->encoding);
         $this->xml->formatOutput = $this->formatOutput;

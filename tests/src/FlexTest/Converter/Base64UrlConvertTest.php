@@ -11,7 +11,6 @@ use Flex\Converter\Base64UrlEncode;
  */
 class Base64UrlConvertTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @test
      */

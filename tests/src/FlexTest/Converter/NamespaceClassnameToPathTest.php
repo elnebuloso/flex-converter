@@ -10,7 +10,6 @@ use Flex\Converter\NamespaceClassnameToPath;
  */
 class NamespaceClassnameToPathTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @test
      */

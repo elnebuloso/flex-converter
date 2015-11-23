@@ -8,7 +8,6 @@ namespace Flex\Converter;
  */
 class NamespaceClassnameToPath
 {
-
     /**
      * convert namespaced classname to path
      *
@@ -17,7 +16,7 @@ class NamespaceClassnameToPath
      */
     public function convert($string)
     {
-        $parts = array();
+        $parts = [];
 
         foreach (explode('\\', trim($string, '\\')) as $name) {
             $name = strtolower(preg_replace('/([a-z])([A-Z])/', '$1-$2', $name));

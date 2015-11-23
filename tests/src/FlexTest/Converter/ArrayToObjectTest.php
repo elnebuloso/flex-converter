@@ -10,29 +10,28 @@ use Flex\Converter\ArrayToObject;
  */
 class ArrayToObjectTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @test
      */
     public function testCreate()
     {
-        $data = array(
-            'foo' => array(
-                'bar' => array(
+        $data = [
+            'foo' => [
+                'bar' => [
                     1,
                     2,
-                    3
-                )
-            )
-        );
+                    3,
+                ],
+            ],
+        ];
 
         $expected = new \stdClass();
         $expected->foo = new \stdClass();
-        $expected->foo->bar = array(
+        $expected->foo->bar = [
             1,
             2,
-            3
-        );
+            3,
+        ];
 
         $converter = new ArrayToObject();
         $result = $converter->convert($data);
@@ -44,11 +43,11 @@ class ArrayToObjectTest extends \PHPUnit_Framework_TestCase
      */
     public function testCreateObject()
     {
-        $data = array(
-            'foo' => array(
-                'bar' => 'baz'
-            )
-        );
+        $data = [
+            'foo' => [
+                'bar' => 'baz',
+            ],
+        ];
 
         $expected = new \stdClass();
         $expected->foo = new \stdClass();

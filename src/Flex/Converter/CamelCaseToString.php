@@ -8,7 +8,6 @@ namespace Flex\Converter;
  */
 class CamelCaseToString
 {
-
     /**
      * convert camel case string
      *

@@ -10,7 +10,6 @@ use Flex\Converter\ObjectToArray;
  */
 class ObjectToArrayTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @test
      */
@@ -18,21 +17,21 @@ class ObjectToArrayTest extends \PHPUnit_Framework_TestCase
     {
         $data = new \stdClass();
         $data->foo = new \stdClass();
-        $data->foo->bar = array(
+        $data->foo->bar = [
             1,
             2,
-            3
-        );
+            3,
+        ];
 
-        $expected = array(
-            'foo' => array(
-                'bar' => array(
+        $expected = [
+            'foo' => [
+                'bar' => [
                     1,
                     2,
-                    3
-                )
-            )
-        );
+                    3,
+                ],
+            ],
+        ];
 
         $converter = new ObjectToArray();
         $result = $converter->convert($data);
@@ -48,11 +47,11 @@ class ObjectToArrayTest extends \PHPUnit_Framework_TestCase
         $data->foo = new \stdClass();
         $data->foo->bar = 'baz';
 
-        $expected = array(
-            'foo' => array(
-                'bar' => 'baz'
-            )
-        );
+        $expected = [
+            'foo' => [
+                'bar' => 'baz',
+            ],
+        ];
 
         $converter = new ObjectToArray();
         $result = $converter->convert($data);
