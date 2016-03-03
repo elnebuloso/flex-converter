@@ -1,6 +1,7 @@
 # flex-converter
 
 [![Build Status](https://travis-ci.org/elnebuloso/flex-converter.svg?branch=master)](https://travis-ci.org/elnebuloso/flex-converter)
+[![Coverage Status](https://coveralls.io/repos/github/elnebuloso/flex-converter/badge.svg?branch=master)](https://coveralls.io/github/elnebuloso/flex-converter?branch=master)
 
 ## Requirements
 
