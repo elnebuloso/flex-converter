@@ -1,15 +1,16 @@
 <?php
-namespace FlexTest\Convert;
+namespace elnebuloso\FlexTest\Convert;
 
-use Flex\Converter\Base64UrlDecode;
-use Flex\Converter\Base64UrlEncode;
+use elnebuloso\Flex\Converter\Base64UrlDecode;
+use elnebuloso\Flex\Converter\Base64UrlEncode;
+use PHPUnit_Framework_TestCase;
 
 /**
  * Class Base64UrlConvertTest
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class Base64UrlConvertTest extends \PHPUnit_Framework_TestCase
+class Base64UrlConvertTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @test

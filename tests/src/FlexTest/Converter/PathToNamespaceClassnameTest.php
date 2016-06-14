@@ -1,14 +1,15 @@
 <?php
-namespace FlexTest\Convert;
+namespace elnebuloso\FlexTest\Convert;
 
-use Flex\Converter\PathToNamespaceClassname;
+use elnebuloso\Flex\Converter\PathToNamespaceClassname;
+use PHPUnit_Framework_TestCase;
 
 /**
  * Class PathToNamespaceClassnameTest
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class PathToNamespaceClassnameTest extends \PHPUnit_Framework_TestCase
+class PathToNamespaceClassnameTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @test

@@ -24,7 +24,7 @@ Via Composer
 ``` json
 {
     "require": {
-        "elnebuloso/flex-converter": "~3.0"
+        "elnebuloso/flex-converter": "~4.0"
     }
 }
 ```

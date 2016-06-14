@@ -1,14 +1,15 @@
 <?php
-namespace FlexTest\Convert;
+namespace elnebuloso\FlexTest\Convert;
 
-use Flex\Converter\ArrayToObject;
+use elnebuloso\Flex\Converter\ArrayToObject;
+use PHPUnit_Framework_TestCase;
 
 /**
  * Class ArrayToObjectTest
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class ArrayToObjectTest extends \PHPUnit_Framework_TestCase
+class ArrayToObjectTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @test

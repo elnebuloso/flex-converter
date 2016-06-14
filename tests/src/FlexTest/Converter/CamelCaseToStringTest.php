@@ -1,14 +1,15 @@
 <?php
-namespace FlexTest\Convert;
+namespace elnebuloso\FlexTest\Convert;
 
-use Flex\Converter\CamelCaseToString;
+use elnebuloso\Flex\Converter\CamelCaseToString;
+use PHPUnit_Framework_TestCase;
 
 /**
  * Class CamelCaseToStringTest
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class CamelCaseToStringTest extends \PHPUnit_Framework_TestCase
+class CamelCaseToStringTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @test

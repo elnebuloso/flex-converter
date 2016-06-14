@@ -1,14 +1,15 @@
 <?php
-namespace FlexTest\Convert;
+namespace elnebuloso\FlexTest\Convert;
 
-use Flex\Converter\ArrayToXml;
+use elnebuloso\Flex\Converter\ArrayToXml;
+use PHPUnit_Framework_TestCase;
 
 /**
  * Class ArrayToXmlTest
  *
  * @author Jeff Tunessen <jeff.tunessen@gmail.com>
  */
-class ArrayToXmlTest extends \PHPUnit_Framework_TestCase
+class ArrayToXmlTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @test
@@ -51,39 +52,40 @@ class ArrayToXmlTest extends \PHPUnit_Framework_TestCase
      */
     public function testCreateFull()
     {
-        $expected = '<?xml version="1.0" encoding="UTF-8"?><books type="fiction"><book author="George Orwell"><title>1984</title></book><book author="Isaac Asimov"><title><![CDATA[Foundation]]></title><price>$15.61</price></book><book author="Robert A Heinlein"><title><![CDATA[Stranger in a Strange Land]]></title><price discount="10%">$18.00</price></book></books>';
+        $expected = '<?xml version="1.0" encoding="UTF-8"?><books type="fiction"><book author="George Orwell"><title>1984</title><hasBooks>true</hasBooks></book><book author="Isaac Asimov"><title><![CDATA[Foundation]]></title><price>$15.61</price></book><book author="Robert A Heinlein"><title><![CDATA[Stranger in a Strange Land]]></title><price discount="10%">$18.00</price></book></books>';
         $books = [
             '@attributes' => [
                 'type' => 'fiction',
             ],
-            'book'        => [
+            'book' => [
                 [
                     '@attributes' => [
                         'author' => 'George Orwell',
                     ],
-                    'title'       => '1984',
+                    'title' => '1984',
+                    'hasBooks' => true,
                 ],
                 [
                     '@attributes' => [
                         'author' => 'Isaac Asimov',
                     ],
-                    'title'       => [
+                    'title' => [
                         '@cdata' => 'Foundation',
                     ],
-                    'price'       => '$15.61',
+                    'price' => '$15.61',
                 ],
                 [
                     '@attributes' => [
                         'author' => 'Robert A Heinlein',
                     ],
-                    'title'       => [
+                    'title' => [
                         '@cdata' => 'Stranger in a Strange Land',
                     ],
-                    'price'       => [
+                    'price' => [
                         '@attributes' => [
                             'discount' => '10%',
                         ],
-                        '@value'      => '$18.00',
+                        '@value' => '$18.00',
                     ],
                 ],
             ],
@@ -134,8 +136,22 @@ class ArrayToXmlTest extends \PHPUnit_Framework_TestCase
     {
         $converter = new ArrayToXml();
         $expected = uniqid();
+
+        /** @var \DOMDocument $expected */
         $converter->setXml($expected);
         $this->assertEquals($expected, $converter->getXml());
+    }
+
+    /**
+     * @test
+     * @expectedException \Exception
+     */
+    public function testInvalidTagName()
+    {
+        $converter = new ArrayToXml();
+        $converter->convert('books', [
+            '-foo' => 'bar',
+        ]);
     }
 
     /**

@@ -1,5 +1,5 @@
 <?php
-namespace Flex\Converter;
+namespace elnebuloso\Flex\Converter;
 
 /**
  * Class ObjectToArray
