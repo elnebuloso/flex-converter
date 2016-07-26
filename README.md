@@ -2,29 +2,10 @@
 
 [![Build Status](https://travis-ci.org/elnebuloso/flex-converter.svg?branch=master)](https://travis-ci.org/elnebuloso/flex-converter)
 [![Coverage Status](https://coveralls.io/repos/github/elnebuloso/flex-converter/badge.svg?branch=master)](https://coveralls.io/github/elnebuloso/flex-converter?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/elnebuloso/flex-converter/version)](https://packagist.org/packages/elnebuloso/flex-converter)
+[![Total Downloads](https://poser.pugx.org/elnebuloso/flex-converter/downloads)](https://packagist.org/packages/elnebuloso/flex-converter)
+[![Latest Unstable Version](https://poser.pugx.org/elnebuloso/flex-converter/v/unstable)](//packagist.org/packages/elnebuloso/flex-converter)
+[![License](https://poser.pugx.org/elnebuloso/flex-converter/license)](https://packagist.org/packages/elnebuloso/flex-converter)
+[![composer.lock available](https://poser.pugx.org/elnebuloso/flex-converter/composerlock)](https://packagist.org/packages/elnebuloso/flex-converter)
 
-## Requirements
-
-The following versions of PHP are supported by this version.
-
-* PHP 5.4
-* PHP 5.5
-* PHP 5.6
-* PHP 7.0
-* HHVM
-
-## Coding Standards
-
-Flex follows the standards defined in the PSR-0, PSR-1, PSR-2 and PSR-4 documents.
-
-## Installation / Usage
-
-Via Composer
-
-``` json
-{
-    "require": {
-        "elnebuloso/flex-converter": "~4.0"
-    }
-}
-```
+different converter, easy to use

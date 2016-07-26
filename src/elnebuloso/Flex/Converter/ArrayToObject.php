@@ -20,11 +20,13 @@ class ArrayToObject
     {
         if (is_array($data)) {
             if (!is_numeric(key($data))) {
-                return (object)array_map(__METHOD__, $data);
+                return (object) array_map(__METHOD__, $data);
             }
 
+            /** @var stdClass $data */
             return $data;
         } else {
+            /** @var stdClass $data */
             return $data;
         }
     }
